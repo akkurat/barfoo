@@ -1,0 +1,6 @@
+
+<p-orderList [value]="songs" (onSelectionChange)="handleSelectionChange($event)">
+   <ng-template let-product pTemplate="item">
+      {{product.name}}
+   </ng-template>
+</p-orderList>

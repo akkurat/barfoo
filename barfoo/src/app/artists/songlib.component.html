@@ -1,0 +1,24 @@
+<div class="grid">
+    <div class="col-6">
+        <p-listbox 
+
+        (onChange)="selectArtist($event)"
+        [options]="artists" [multiple]="true" [filter]="true"
+        
+        
+        >
+        </p-listbox>
+    </div>
+    <div class="col-6">
+        <p-listbox [options]="albums" [multiple]="true" [filter]="true"
+        (onChange)="selectAlbum($event)">
+        </p-listbox>
+    </div>
+    <div class="col-12">
+        <p-listbox [options]="songs" optionLabel="name" dataKey="_id"
+        [multiple]="true" [filter]="true" (onChange)="selectSong($event)"
+        (onDblClick)="addToQueue($event)"
+        >
+        </p-listbox>
+    </div>
+</div>
